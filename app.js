@@ -1,7 +1,6 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 
-let friendList = [];
-
+let friendList = []; // Adiciona lista de amigos
 
 // Verificar se o nome é válido.
 function isValidName(writtenName) { 
@@ -37,10 +36,12 @@ function addFriend() {
         let listLength = friendList.length; // Atualiza o comprimento da lista
         let sortedName = friendList[parseInt(Math.random() * listLength)]; // Sorteia um nome
         alert(`O nome sorteado foi ${sortedName}`); // Exibe o nome na tela
-        updateFriendListDisplay()
+        friendList = []
+        updateFriendListDisplay();
     }
 }
 
+// Atualiza lista de amigos na tela
 function updateFriendListDisplay() {
     const listElement = document.getElementById('friendList'); // Seleciona o elemento da lista
     listElement.innerHTML = ""; // Limpa a lista existente
